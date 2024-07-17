@@ -1,0 +1,83 @@
+/* FUNÇÕES
+Uma função Javascript é um bloco de código projetado para executar uma
+tarefa específica.
+
+É como uma pequena "Fabrica" onde você faz uma entrada e ele te dá uma saida.
+
+Pode ser encarada como "mini-programas" projetados para fazer uma tarefa
+que vai contribuir para todo código.
+
+Uma função Javascript é executada quando "algo"  a invoca (chama-a).
+*/
+
+function soma(valor1,valor2 pode por quantos paramentros quiser){bloco de código o que irá acontecer dentro da função}
+
+Criamos uma função de soma com 2 valores e dentro do bloco vai acontecer a soma do valor 1 + valor 2:
+
+function soma(valor1, valor2){
+    return valor1 + valor2;
+}
+
+document.getElementById("texto").innerHTML = soma(10,10); = aqui estamos invocando ela no nosso paragrafo id="texto" essa função e atribuindo (10,10); os valores para valor1 e valor2
+
+
+Outro exemplo:
+
+function soma(valor1, valor2){
+    return valor1 + valor2;
+}
+
+var total = soma (10, 23);
+alert(total); cria um alert com 10+23 =33
+
+****criamos uma função para que sempre que precisar só chamar a função em x de criar varias****
+
+function realParaDolar (real, cotacaoDolar){
+    return real * cotacaoDolar;
+}
+
+var total = realParaDolar (10, 5.08);
+alert(total);
+
+10 x 5.08 = 50.8
+
+Exemplo com concatenação de texto:
+
+var valorReal = 7.89;
+var cotacao = 5.08;
+
+var total = realParaDolar (valorReal, cotacao);
+
+alert("O valor em real é R$: "+valorReal+" o valor em dolar US é: "+total);
+alert: O valor em real é R$: 7.89 o valor em dolar US é: 40.081199999999995
+
+
+arquivo.js:
+
+function alertaHello(){
+    alert("Olá pessoal");
+}
+
+index.html:
+
+<button onclick="alertaHello()">Clique aqui</button>
+
+ao clicar vai chamar a função js e emitir um alert dizendo olá pessoal
+
+outro exemplo:
+
+function paraCelsius(valorFahrenheit){
+    return (5 / 9) * (valorFahrenheit - 32);
+
+}
+
+var x = paraCelsius(77);
+
+alert("A temperatura é de: "+x+" para graus celsius");
+
+
+
+
+
+
+

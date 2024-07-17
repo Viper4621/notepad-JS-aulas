@@ -1,0 +1,8 @@
+Comentarios serve para organizar nossos códigos para facilitar entendimento
+
+//atribuindo valor para a e b e usando logica com operador para dar valor de c que seria a+b = c
+//usado para 1 linha
+
+/*
+Comentario em multiplas linhas utilizar desta forma 
+*/

@@ -1,0 +1,52 @@
+// If e Else
+//declaração condiçionais if = se acontecer true um bloco de codigo e else = se não acontecer false outro bloco de codigo
+
+var interruptor = "on";   = caso colocar off = alert A lâmpada esta desligada
+
+if (interruptor=="on"){
+    alert('A lampada esta ligada');
+}else{
+    alert('A lampada esta desligada');
+}
+
+
+3 forma de condição: Else if
+
+var hora = new Date().getHours();   - ira puxar horário e se for < que 12 h bom dia se for < que 18 boa tarder caso não for nem um nem outro boa noite
+
+
+if (hora < 12) {
+    alert("Bom dia");
+}else if(hora <18){
+    alert("Boa tarde");
+}else{
+    alert('boa noite');
+}
+
+De acordo com mhora verifica bom dia boa tarde boa noite com as condições if else if else
+
+na pratica geralmente para validação de formulários
+
+</head>
+    <h1>Aprendendo Javascript</h1>
+    <p id="teste"></p><br>
+    <input style="padding: 50px; font-size: 40px;" type="text" id="nome" placeholder="Digite seu texto">
+    <button onclick="verificar()" style="padding: 50px;">Verificar</button>
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+
+function verificar(){
+    let nome = document.getElementById('nome').value;
+
+    if (nome =="" || nome==null){
+        let p = document.getElementById("teste");
+        p.innerHTML = "O campo não pode estar vazio";
+        p.style.color = "red";
+    }else{
+        let p = document.getElementById("teste");
+        p.innerHTML = "Parabens tudo ok";
+        p.style.color = "green";
+    }
+}

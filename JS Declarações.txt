@@ -1,0 +1,47 @@
+Declarações JS
+
+dados/comandos/instruções que nosso navegador ira interpretar e vai executar.
+JS hoje em dia tem derivações node.js para ler informações por fora de um navegar que antes era só usado em browser.
+
+Sintaxe: Maneira que o código deve ser escrito.
+
+; separa uma declaração e outra.
+
+let a,b,c;
+a=5;
+b=6;
+c=7;
+
+ou
+
+let a,b,c; a=5; b=6; c=7;
+
+ambas formas estão vão ser entendidas pois estamos separando por ;
+as declarações não necessitam ; porem é conduta para organizar código e maioria de outras linguagens precisam do ; então sempre por na terminação de declarações.
+JS = ignora espações em branco.
+
+Então por padrão utilizar espações para separação de códigos e dar visibilidade e clareza para o código.
+
+let pessoa = "Erick" ;
+
+JS = aceita quebra de linhas
+por habito não quebrar linhas devido a outras linguagens caso precisar quebrar linha somente após algum operador exemplo "="
+
+document.getElementById("texto").innerHTML =
+"Meu primeiro texto <b>JS</b>!"
+
+Declaração em bloco:
+
+function minhaFuncao(){
+    document.write(5 + 5);
+    document.write(5 + 5);
+    document.write(5 + 5);
+}
+
+todas doc.write fazem parte do bloco minhaFuncao.
+
+
+
+
+
+

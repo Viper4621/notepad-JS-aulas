@@ -1,0 +1,143 @@
+/* Vamos entender Variáveis
+Variavéis são "recipientes" onde podemos armazenar informações que
+podem variar, ou seja, podemos ter qualquer tipo de valor.
+
+no Javascript temos 3 palavras-chaves para declarar variáveis:
+-> var
+-> let
+-> const
+*/
+
+//var = armazenar informações
+var pote = "Bombom";
+alert(pote); na pagina o alert = Bombom
+
+var a = 2;
+var b = 3;
+var c = a + b;
+alert(c); na pagina o alert = a+b = 5
+
+//declaração de variáveis
+
+var a,b,c;
+
+//atribuição de valores
+a = 2;
+b = 3;
+c = a + b;
+alert(c);
+
+var pode ser usado em qualquer parte do nosso código o você pode atribuir novos valores dentro do código
+
+a = 2;
+b = 3;
+c = a + b;
+
+var = a = 5; *atribuímos novo valor de 5 a var a*
+alert(a); *vai dar um alert de 5 o novo valor atribuído mesmo que acima tenha outro valor então pode mudar conforme necessidade*
+
+//declaração de variáveis concatenação de palavras
+
+//não pode começar com numeros / nem espaços entre /  
+
+var nome, sobrenome, nomeCompleto;
+
+//atribuição de valores
+
+nome = "Erick";
+sobrenome = "Luciano";
+nomeCompleto = nome +" "+ sobrenome; // usamos + " " + = para dar um espaço entre as 2 atribuições de valores para não ficar colado exemplo ErickLuciano e sim Erick Luciano
+
+document.getElementById("texto").innerHTML = nomeCompleto;
+
+Concatenar números + letras começa bagunçar as coisas 
+caso for usar números declarar nova var exemplo soma;
+
+
+//declaração de variáveis concatenação de palavras
+
+//não pode começar com numeros / nem espaços entre / não pode usar palavras chaves já do js
+
+var nome, sobrenome, nomeCompleto, idade, soma;
+
+//atribuição de valores
+nome = "Erick";
+sobrenome = "Luciano";
+idade = 36;
+nomeCompleto = nome +" "+ sobrenome;
+soma = idade + 10;
+pessoa = nomeCompleto + " " + soma;
+
+document.getElementById("texto").innerHTML = pessoa;
+
+
+
+Diferenças entre var / let / const
+
+let = torna variável única não pode ser re-declarada
+
+let pessoa = "erick";
+let pessoa = "luciano";
+
+no console vai dar erro SyntaxError: indentify 'pessoa' has already been declared
+
+no var:
+
+var pessoa = "erick";
+var pessoa = "luciano";
+
+alert(pessoa);
+
+Vai me retornar o alert com Luciano pois consigo mudar atribuição.
+
+Trabalhando com var ela funciona em todo scope mesmo num bloco de código separado exemplo:
+
+var x=10; //aqui é 10
+
+{
+ var x=2; //aqui é 2
+}
+
+//aqui tambem será 2 pois redefinimos
+
+document.getElementById("texto").innerHTML = x;
+
+
+let ====
+
+let x=10; //aqui é 10
+
+{
+ let x=2; //aqui é 2 funciona com funções em vários blocos para não redefinir e só terá o valor dentro do bloco trabalhado
+}
+
+//aqui tambem vai ser 10 
+
+document.getElementById("texto").innerHTML = x;
+
+let usamos bastante para não sobrescrever valores já atribuídos e não termos problemas em dar novos valores e trazer erros
+let pode ser atribuído novo valor caso necessário dentro do scope { let x = valor que desejar} o que estiver fora do scope vai ter o valor definido porem dentro de um scope 
+podemos mudar de acordo a necessidade.
+let = obedece scope {}
+
+
+const = não muda nunca vai ser para sempre mesmo dentro ou fora de bloco não recebe nenhum outro valor JAMAIS.
+Usado para variável sempre vai ter aquele valor e nunca muda é daquele jeito e esta acabado.
+const = não muda nunca mesmo valor sempre dentro e fora de scope não modifica
+
+var = coringa pode mudar sempre e ira pegar de acordo com a ordem do código podendo ter valor de fora e sempre ser reatribuído e respeita scope { var x = 10 novo valor dentro}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

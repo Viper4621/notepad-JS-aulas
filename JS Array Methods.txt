@@ -1,0 +1,182 @@
+</head>
+<!-- <body onload="alert('Pronto')"> -->
+    <h1>Aprendendo Javascript</h1>
+    <p id="teste"></p>
+   
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+para buscar um js e atribuir em um id na index:
+
+const pessoa = ["Erick", "Luciano", 36 ,"aluno"]; //array
+document.getElementById("teste").innerHTML = pessoa;
+
+vai chamar os elementos da const pessoa na pagina html
+
+usando methodo para troca de separadores da nossa matriz
+pessoa.join(" * "); pode usar qualquer letra ou hífen . , underline etc
+document.getElementById("teste").innerHTML = pessoa.join(" * ");    = troca as virgulas por * asterisco.
+quando trabalha coma rray sempre vai estar adicionando itens e removendo da nossa matriz.
+
+remoção ultimo item:
+
+pessoa.pop(); = remove ultimo item.
+pessoa.push("Qualquer Coisa"); = inclui um item em após ultimo item.
+pessoa.shift(); = remove o 1 item da nossa lista quando fizer isso todos os índices de posição são realocados -1.
+pessoa.unshift("top"); = adiciona em 1 item de nossa matriz a atribuição que damos e todos os demais itens passão a ser +1 em posição.
+delete pessoa[0]; = neste methodo irá deletar o item que você colocar a posição porém não vai ter realocação de posições todos elementos continuam na mesma posição.
+ele irá trocar a posição por undefinned não recomendado a não ser que você deseja usar pop ou shift para retirar elementos.
+
+método para incluir múltiplos valores:
+
+""na syntax abaixo campo 1 é posição que desejamos incluir nossos valores novos e 
+                   campo 2 é 0 para deletar valor de nosso array""    
+    
+pessoa.splice(1,0, "item1", "item2"); = desta forma ele iram incluir o valor item1 e valor item2
+                  //0        //1    //2     //3
+const pessoa = ["Erick", "Luciano", 36 ,"aluno"];
+
+ou seja os novos valores vão entrar no lugar de Luciano pos //1 e os demais ganham +1 de posição
+
+Como juntar matrizes concatenar: "fusão de matrizes" 
+
+const lista1 = ["arroz", "feijão", "leite", "macarrão"];
+const lista2 = ["suco", "refrigerante", "carne"];
+
+const superLista = lista1.concat(lista2);         = método de concatenar sempre deve ser atribuído em uma nova variável "nova matriz"
+
+document.getElementById("teste").innerHTML = superLista;   = pronto juntamos as 2 matriz em 1.
+
+pode ser com quantas matrizes quiser:
+
+const superLista = lista1.concat(lista2, lista3, lista4);  = quantas lista desejar sempre atribuir nova variável igual fizemos a const superLista.
+
+Fatiar matriz para valer a partir de uma parte especifica:
+
+                       //0          //1      //2       //3
+const jogadores = ["Biro Biro", "Ribamar", "Pelé", "Maradona"];
+const craques = jogadores.slice(2);    = função que irá fatiar e mostrar a partir da posição desejada no caso 2 Pelé
+
+document.getElementById("teste").innerHTML = craques;
+
+Fatiar posições que desejar:
+podemos usar slice para começar e terminar dando 2 posições start/end
+
+const jogadores = ["Biro Biro", 0
+    "Ribamar",   //1
+    "Pelé",      //2               ---inicio slice
+    "Maradona",  //3
+    "Neymar",    //4
+    "Cristiano Ronaldo",  //5
+    "Vampeta",  //6                ---termino slice   
+    "Erick",    //7
+];
+
+const craques = jogadores.slice(2,6);
+
+método sort para deixar em ordem alfabética:
+
+const jogadores = ["Biro Biro",
+    "Ribamar",
+    "Pelé",
+    "Maradona",
+    "Neymar",
+    "Cristiano Ronaldo",
+    "Vampeta",
+    "Erick",
+];
+const jogOrdem = jogadores.sort();
+caso queira ordem de trás para frente após linha acima usar:
+jogadores.reverse();  = traz sequencia de Z - A
+
+document.getElementById("teste").innerHTML = jogOrdem;
+
+sort = usado apenas em texto por padrão em caso de números vai pela letra que começa numero então não funciona
+para ser em ordem numeral precisa ser feita da seguinte forma:
+
+
+
+Situação com matriz sem ser strings no caso numérica:
+
+
+const numeros = [40, 100, 1, 5, 25, 10];
+numeros.sort(function (a,b) {return a-b} );   =  comando obrigatório em caso de números e não strings.
+
+document.getElementById("teste").innerHTML = numeros;
+
+
+Para pegar maior numero:
+
+const numeros = [40, 100, 1, 5, 25, 10];
+
+document.getElementById("teste").innerHTML = MaiorNumero(numeros);
+function MaiorNumero(array){                      ====   precisa criar essa função
+    return Math.max.apply(null, array);
+}
+
+Menor numero:
+document.getElementById("teste").innerHTML = MenorNumero(numeros);
+function MenorNumero(array){
+    return Math.min.apply(null, array);
+}
+
+Exemplo para números maiores que 20
+                       método filter e criar função()
+const maior20 = números.filter(filtragem)
+
+completo:
+
+const numeros = [40, 100, 1, 5, 25, 10];
+
+const maior20 = numeros.filter(filtragem);
+
+document.getElementById("teste").innerHTML = maior20;
+
+          (parâmetros)valor,indice,array
+function filtragem(value, index, array){
+    return value > 20;
+}
+
+Exemplo para números menores que 20
+
+const numeros = [40, 100, 1, 5, 25, 10];
+
+const menor20 = numeros.filter(filtragem);
+
+document.getElementById("teste").innerHTML = menor20;
+
+function filtragem(value, index, array){
+    return value < 20;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+/* ARRAYS
+Os arrays Javascript são usados para armazenar vários valores
+em uma única variável. Diferente dos objetos, que funcionam com
+propriedades ou "nomes" que você dá para os itens dentro dele, os
+arrays não possuem propriedades. O item dentro dele é encontrado pela 
+posição.
+
+Imagine um array como uma lista de itens, com controle, por ordem de
+posição dentro dele.
+
+Ex: const lista = {"arroz", "feijão", "macarrão", "leite"};
+
+A lista[0] (lista na posição 0) vai conter o valor "arroz".
+A lista[1] (lista na posição 1) vai conter o valor "feijão".
+
+E assim por diante
+é utilizado para criar em situações de muitos itens ao fazer abaixo:
+*/
+
+var item = "arroz";
+var item = "feijão";
+var item = "macarrão";
+var item = "leite";
+
+Jeito melhor de fazer:
+
+                  0         1         2           3
+const = lista ["arroz", "feijão", "macarrão", "leite"];
+
+em matriz sempre começamos com 0
+
+pode ser feito assim:
+quando fazemos isso em matriz estamos fazendo um array literal
+
+const = lista [
+    "arroz", 
+    "feijão", 
+    "macarrão", 
+    "leite"
+];
+
+também pode ser feito =
+
+const lista =[];
+lista=[0] = "arroz";
+lista=[1] = "feijão";
+lista=[2] = "macarrão";
+lista=[3] = "leite";
+
+3 forma de array:
+
+const lista = new Array("arroz", "feijão", "macarrão", "leite");
+
+para agilidade e simplicidade e melhor leitura indicado sempre fazer =
+
+const = lista ["arroz", "feijão", "macarrão", "leite"];
+
+exemplo:
+
+const lista = new Array("arroz", "feijão", "macarrão", "leite");
+let x = lista[3];
+alert(x);
+
+alerta de item = leite pois sempre inicia no 0
+
+podemos mudar valores da seguinte forma:
+
+const lista = new Array("arroz", "feijão", "macarrão", "leite");
+lista[0] = "café";   = trocamos arroz por café
+alert(lista[0]);
+
+para verificarmos todos itens de nosso array podemos:
+
+const lista = ["arroz", "feijão", "macarrão", "leite"];
+lista[0] = "café";
+
+console.log(lista);   = no f12 irá mostrar todos itens dentro do array  = matrizes tipo arrai são tipos especial de objeto pode colocar coisas mais complexas dentro do array ou função ou objeto array pode armazenar qualquer tipo de coisa:
+
+diferença de objeto para array:
+
+const pessoa = ["Erick", "Luciano", 36]; //array
+const pessoa = {nome:"Erick" sobrenome:"Luciano",idade: 36}; //objeto
+
+pessoa.nome; //objeto para pegar 1 nome
+pessoa[0]; //matriz para pegar 1 nome
+
+matrizes é recomendado utilizar com dados mais elaborados.
+objetos podemos usar com coisas simples como 1 item com varias propriedades
+
+para verificar quantidade de itens dentro de array:
+
+const pessoa = ["Erick", "Luciano", 36]; //array
+
+alert(pessoa.length);//3
+
+para saber qual ultimo item dentro de um array:
+
+const pessoa = ["Erick", "Luciano", 36]; //array
+
+alert(pessoa[pessoa.length - 1]);   = vai retornar o 36 usamos - 1 no código pois a matriz começa em 0
+
+para acrescentar novo item em um array podemos usar = 
+
+const pessoa = ["Erick", "Luciano", 36 ,"aluno"]; //array
+pessoa.push("Brasileiro")
+ou
+pessoa[pessoa.length] = "Casado";
+push é mais simples porem temos que ter cuidado ao colocar valor e passar índice incorreto
+pode por também:
+
+pessoa[6] = "Empregado"; nosso array base tem 0 Erick / 1 Luciano / 2 36 / 4 Aluno / 5 Casado / 6 Empregado 
+tomar cuidado neste exemplo pois precisamos saber quantas posições temos caso contrario criar fora da sequencia o js vai deixar como em branco e se precisar
+invocar algum desses brancos vai dar undefined apresentando erro.
+
+Como saber se variável é uma matriz caso receba de site externo ou outro lugar:
+
+const pessoa = ["Erick", "Luciano", 36 ,"aluno"]; //array
+pessoa.push("Brasileiro")
+pessoa[6] = "Empregado"
+
+Usando seguinte código:
+alert(Array.isArray(pessoa));  = alert ira informar true
+
+
+
+
+
+
+
+
+

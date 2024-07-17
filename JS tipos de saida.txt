@@ -1,0 +1,71 @@
+<script>
+        alert('olá mundo!');
+    </script>
+
+box alerta para enviar msg no body seria js interno.
+
+diferente de css que vai no header sempre por o script no final do documento antes do fechamento do body é interessante que ele seja renderizado por ultima para que as funções dele tenha certeza que vai modificar o html quando chegar a chamada navegador lê as informações de cima pra baixo e faz com que o site carrega mais rápido "sempre renderizar o javascrypt no final"
+css = href=""  Javascrypt = <scypt src=""
+
+Java Scrypt externo:
+
+Criar pasta Js e dentro um arquivo index.js ou script.js e depois referenciar na tag body:
+<body>
+    <script src="/js/index.js"></script>
+</body>
+
+Tipos de saída:
+
+-Escrever conteúdo html
+-caixa de alerta
+-mostrar valor em console
+formas de apresentar um dado
+
+<body>
+    <h1>Aprendendo Javascript</h1>
+    <p id="texto"></p>
+    <script src="/js/index.js"></script>
+</body>
+
+js externo:
+document.getElementById("texto").innerHTML="Meu primeiro texto <b>JS</b>!";
+
+estamos atribuindo externo para pegar um documento de certo elemento no caso id "texto" e colocando para dentro do html ele ter o conteúdo "Meu primeiro texto" sempre fechar com ; regra de
+conduta em JS
+
+Outra maneira de inserir um dado através de documento.write('Oi escrito com document.write');
+
+<body>
+    <h1>Aprendendo Javascript</h1>
+    <p id="texto"></p>
+    <p>
+        <script>
+            document.write('Oi escrito com document.write');
+        </script>
+    </p>
+    <script src="/js/index.js"></script>
+</body>
+
+"document.write mais utilizado para proposito de textes"
+
+alert = alert(10+5); abre um box dando resultado.
+
+console.log("Oi isso é um alerta"); parecido com alert porem silencioso usar f12 na pagina funções de desenvolvedor
+para ver respostar fora do site e não carregar o navegador e ver os resultados do js
+
+então temos:
+
+-innerhtml
+-document.write
+-alert
+-console.log
+
+Alert e console são mais usados a medida de resultados
+interação inner.html
+textes document.write
+
+
+
+
+
+

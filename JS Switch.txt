@@ -1,0 +1,125 @@
+/* switch
+é usado  para realizar diferentes ações com base em diferentes condições
+no mesmo bloco de verificação. Caso a condição não seja compatível
+não será executada e o valor padrão será acionado.
+*/
+parecido com if e else porem com algumas vantagens dependendo da situação
+
+switch (expressao) {
+    case a:
+        //o que acontece
+        break;
+    case b:
+        //o que acontece
+        break;
+    case c:
+        //o que acontece
+        break;
+    default:
+        //o que acontece caso nenhuma das opções forem ralizadas
+}
+
+
+Caso usando switch:
+
+html:
+
+</head>
+    <h1>Aprendendo Javascript</h1>
+    <p id="teste"></p><br>
+    <input style="padding: 50px; font-size: 40px;" type="text" id="cor" placeholder="Digite uma cor">
+    <button onclick="verificaCor()" style="padding: 50px;">Verificar</button>
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+Criamos um input + botão no botão verificaCor() para gerar função que irá verificar bloco por bloco por isso usamos o comando break; caso não colocar default
+ele irá continuar lendo.
+switch funciona de forma literal como operador === tem que ser a expressão igual se não apresenta erro tem que ser case sensitive
+
+function verificaCor(){
+    let cor = document.getElementById("cor").value;       = função para ativar e dar o value dado
+
+
+
+switch (cor) {
+    case "azul":              = caso digitado azul comportamento
+        //o que acontece
+        document.body.style.backgroundColor = "blue"
+        break;
+    case "vermelho":          = caso digitado vermelho comportamento
+        //o que acontece
+        document.body.style.backgroundColor = "red"
+        break;
+    case "amarelo":            = caso digitado amarelo comportamento
+        //o que acontece
+        document.body.style.backgroundColor = "yellow"
+        break;
+    default:                    = caso digitado nenhuma das cores dar mensagem e mostrar cor
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Nenhuma cor disponível "+cor;
+    }
+}
+
+Solução para problema case sensitive
+
+function verificaCor(){
+    let cor = document.getElementById("cor").value;
+    cor = cor.toLowerCase();    = atribuir esse código para o document transformar tudo do input em lower case e não existir erro
+
+switch também é muito usado para dias da semana:
+
+
+</head>
+    <h1>Aprendendo Javascript</h1>
+    <p id="teste"></p><br>
+    <input style="padding: 50px; font-size: 40px;" type="text" id="cor" placeholder="Digite uma cor">
+    <button onclick="diaDaSemana()" style="padding: 50px;">Verificar</button>
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+
+function diaDaSemana(){
+    var dia = new Date().getDay();
+
+    console.log(dia);
+
+
+switch (dia) {
+    case 0:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é domingo"
+        break;
+    case 1:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é Segunda"
+        break;
+    case 2:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é terça"
+        break;
+    case 3:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é quarta"
+        break;
+    case 4:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é quinta"
+        break;
+    case 5:
+         //o que acontece
+         document.getElementById("teste").innerHTML = "Hoje é sexta"
+        break;    
+    case 6:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "Hoje é sabado"
+        break;  
+
+
+    default:
+        //o que acontece
+        document.getElementById("teste").innerHTML = "não sei que dia é ...";
+    }
+}
+

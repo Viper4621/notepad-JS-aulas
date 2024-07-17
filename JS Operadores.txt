@@ -1,0 +1,187 @@
+Leitura complementar:
+
+https://www.w3schools.com/js/js_operators.asp
+
+
+/* Vamos entender operadores:
+
+-> os operadores Javascypt são usados para atribuir valores, 
+comparar valores, executar operações aritméticas e muito mais.
+
+São os sinais que que usamos + - / = ++ += -= && || etc...
+
+São separados em 6 "categorias":
+
+1) Operadores Aritméticos (matematicos) 
+2) Operadores de Atribuições = dar valor a variavel
+3) Operadores de Sequência = concatenar strings (textos)
+4) Operadores de comparação = compararar variáveis informações
+5) Operadores Condicional (Ternário) = atribuir valor a variável já determinar condição
+6) Operadores Lógicos
+*/
+
+var valor1, valor2, total;
+valor1 = 5;
+valor2 = 2;
+total = valor1 + valor2;
+
+operador + = aritmético soma 
+operador = atribuição neste exemplo a soma que vai dar o atributo ao total da soma total = valor1 + valor2;
+
+1) Operadores Aritméticos (matematicos) 
+
++ = soma
+- = subtração
+* = multiplicação
+/ = divisão
+++ = incremento de +1 (exemplo total = ++valor1;)  exemplo itens de carrinho de compras quantidade inicial 1 conforme clica ++ para colocar mais item
+-- = decremento de -1 (exemplo total = --valor1;) exemplo -- para retirar itens do carrinho
+
+2) Operadores de Atribuições = dar valor a variável
+
+= atribuir valor para variável que criamos
+valor1 = 5;
+valor2 = 2;
+
+Shorthand:
+valor1 += valor2; mesma coisa que ===== valor1 = valor1 + valor2;
+valor1 -= valor2; mesma coisa que ===== valor1 = valor1 - valor2;
+
+todos funcionam com operadores matemáticos exemplo
++= -= /= *= usam para atalhos geralmente pode complicar então pode usar normal=> valor1= valor1 + valor2;
+
+Concatenação: Quando temos textos
+
+var valor1, valor2, total;
+valor1 = "erick ";
+valor2 = "luciano";
+
+total = valor1 + valor2;   = concatenação de 2 "strings dentro de quotes"(texto) neste caso operador de sequencia
+alert(total);   = alert com Erick Luciano
+
+Operadores de comparação muito utilizados em declarações logicas com verdadeiro ou falso 
+
+== comparação:
+
+valor1 = 8;
+valor2 = 10;
+
+total = (valor1 ==);  estamos usando 2 sinais de igual pois se fosse 1 seria para atribuir valor a variável então usamos 2 sinal em comparação
+alert(total);   retorna false 8 não igual a 10. //true (verdadeiro) ou false (falso)
+
+=== comparar se valor é igual e se o tipo é igual
+
+valor1 = 8;  (aqui é um numero)
+valor2 = "8"; (aqui é um texto com mesmo valor) 
+
+total = (valor1 == valor2);
+alert(total);  vai me dar true por ser 8 mesmo que um seja numero e outro texto 
+
+então usamos === para ver valor e tipo se é igual
+
+total = (valor1 === valor2); aqui retorna false pois 1 valor é numero 2 valor "string - texto"
+alert(total); 
+
+!= diferente ou não igual:
+
+total = (valor1 != valor2); false pois 1 e 2 é 8 então são iguais
+
+caso precisar que verifique valor e tipo usamos:
+
+!== ai irá retornar se valor e tipo é igual
+
+Temos sinal maior > / menos < maior igual >= / menor igual <=
+
+valor1 = 8;
+valor2 = 12;
+
+Menor
+total = (valor1 < valor2); true 8 é menor que 12
+alert(total);
+
+Maior
+total = (valor2 > valor1); true 12 é maior que 8
+
+maior ou igual
+total = (valor1 >= 8); true valor 1 é maior e igual a 8
+
+Operador condicional (Ternário)
+
+var idade, eleitor;
+idade=18
+eleitor= (idade<18) ? "Não Eleitor":"Sim, Eleitor";
+
+alert('A resposta é: ' + eleitor);
+
+outro exemplo:
+
+var idade, eleitor;
+idade=17
+eleitor= (idade<18) ? "Não Eleitor":"Sim, Eleitor";
+
+alert('A resposta é: ' + eleitor + ' a idade dele é de: ' + idade);
+
+retorno do alert: A resposta é: Não Eleitor a idade dele é de: 17
+eleitor atribuímos que tem que ser > que 18
+idade=17 então retorna + idade = 17
+
+para criar o ternário:
+
+ condição  int    true      false     
+(idade<18) ? "Não Eleitor":"Sim, Eleitor";
+
+Operador logico mais de 1 condição:
+
+resultado = (idade > 60 && idade < 70);  estamos colocando que idade maior que 60 && menor que 70
+&& = neste exemplo idade maior que 60 e menor que 70 //true ou false qualquer idade entre 61 a 69 true qualquer fora false.
+
+resultado = (idade === 65 || idade === 72);
+|| = ou então se for igual 65 ou 72 true caso não false.
+
+idade=71
+resultado = !(idade === 65); true pois 
+! negação pois nossa idade declarada é 71 então !idade ===65 verdade não é mesmo valor.
+
+
+
+----------------------------------------
+var idade, eleitor, resultado;
+idade=25
+eleitor= (idade<18) ? "Não Eleitor":"Sim, Eleitor";
+
+alert('A resposta é: ' + eleitor + ' a idade dele é de: ' + idade);
+
+alert: A resposta é: Sim, Eleitor a idade dele é de: 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

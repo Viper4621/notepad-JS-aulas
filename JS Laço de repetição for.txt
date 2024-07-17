@@ -1,0 +1,21 @@
+Criando sequencia de números com for 1 a 10000:
+
+</head>
+    <h1>Aprendendo Javascript</h1>
+    <p id="teste"></p><br>
+
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
+
+/* Laço de repetição For
+Laços oferencem um jeito facil de repetição para executar uma ação que precisa ser repetida
+varias vezes */
+//    indice começa em 0 0 é menor que 10001 entao acrescenter +1 até chegar no numero 10000
+// innerHTML como vai ser repetido usar operador += para sempre dar +1 sem perder o valor anterior
+//10001 para ser até numero 10000
+
+for (let i = 0; i < 10001; i++){
+    document.getElementById("teste").innerHTML += i + ", ";
+}

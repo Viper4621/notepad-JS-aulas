@@ -1,0 +1,42 @@
+Sintaxe: Maneira de como digitar nossas regras e comandos todas linguagem de programação tem por um padrão.
+
+Diferença de texto e um numero:
+
+numero:
+
+console.log(5 + 5);
+no f12 ele faz a conta no console e devolve = 10
+
+console.log("5 + 5");
+Colocando aspas duplas ele entende o conteúdo 5+5 como texto e no console ele devolve = 5 + 5 não fazendo a conta.
+
+Ou seja "conteúdo" = texto
+'' = pode ser texto também.
+
+Variáveis:
+
+var let const
+
+exemplo declarar variável com valor e dar um operador:
+
+var a=1;
+var b=5;
+var c=a+b;
+console.log(c);
+
+Operador de atribuição
+
+= operador que ira atribuir um valor
+Operador + = soma
+Operador * = vezes
+Operador - = Subtração
+Operador / = divisão
+
+console retorna valor de (c); que seria var a + var b = 1 + 5 = 6
+
+JS case sensitive seguir sintaxe correta sempre letra maiúscula e minúscula caso contrario vai apresentar erro ou se for de proposito a declaração para usar valores diferentes
+JS não se deve usar hifens usar camel case exemplo:
+var primeiro-nome = JS entende primeiro menos nome = erro 
+Maneira correta: var primeiroNome; (regra de conduta).
+
+

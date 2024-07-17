@@ -1,0 +1,67 @@
+/*Objetos
+
+objetos são basicamente variáveis com muitos valores dentro.
+
+Ex: const carro = {marca:"ford", modelo:"ka", ano: 2015}
+
+Os valores dentro de um objeto são chamados propriedades
+
+Objetos também podem ter métodos. Um metodo é uma função colocadas dentro
+de uma propriedade.
+
+*/
+
+Objeto é exatamente como variável só que com muitos itens dentro e funções chamadas de métodos
+
+Objeto literal quando nos já determinamos as propriedades que ele já ira ter:
+
+const carro = {
+    marca:"Ford", 
+    modelo:"Ka", 
+    Ano:2015, 
+    placa:"ABC-1234"
+};
+
+dentro de um objeto podemos ter Método = função colocado dentro de uma propriedade exemplo: buzina
+
+const carro = {
+    marca:"Ford", 
+    modelo:"Ka", 
+    ano:2015, 
+    placa:"ABC-1234"
+    buzina: function() {alert("Biiiiiiiii")}
+};
+
+caso queira apenas 1 propriedade especifica podemos fazer da seguinte forma:
+
+console.log(carro.ano); = ira mostrar Ano
+console.log(carro.marca); = ira mostrar Ford
+console.log(carro.modelo); = ira mostrar Ka
+console.log(carro.placa); = ira mostrar ABC-1234
+
+pode ser usado também:
+
+console.log(carro["ano"]);
+console.log(carro["marca"]);
+console.log(carro["modelo"]);
+console.log(carro["placa"]);
+
+para chamar um método: vamos chamar marca / modelo / ano e placa dentro da função no f12 console.log(carro.completo());
+
+const carro = {
+    marca: "Ford", 
+    modelo: "Ka", 
+    ano: 2015, 
+    placa: "ABC-1234",
+    buzina: function () { alert("Biiiiiiiii")},
+    completo: function() {
+        return "A marca é "+this.marca+" e o modelo é: "+this.modelo+" e o ano é: "+this.ano+" e a placa é "+this.placa;
+    }
+};
+
+console.log(carro.completo());
+
+quando for pegar item do próprio método usar this.nome / objetos são uteis para colocar coleções ou conjunto de informações a variável se promove a objeto
+pois tem varias propriedades ou métodos que são funções dentro da propriedade que pode ser invocada quando necessária.
+
+
